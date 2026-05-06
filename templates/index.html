@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projeto Site</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>hello world</h1>
-    <p>Bem-vindo ao meu site!</p>
+
+<body id="page-top">
+    <!-- div do navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Colegio benedicto</a>
+            <ul class="navbar-nav">
+                <li><a class="nav-link" href="#portfolio">Notas</a></li>
+                <li><a class="nav-link" href="#about">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- boas vindas/titulo -->
+    <header class="masthead">
+        <div class="container">
+            <img src="{{ url_for('static', filename='img/logo2.jpg') }}"
+                alt="Logo"
+                class="masthead-avatar"
+            />
+            <h1 class="masthead-heading">Engajar para transformar</h1> 
+            <p class="masthead-subheading">Bem-vindo ao Site de ensino</p>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- seção de notas-->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center text-secondary">Notas</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line-nota"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line-nota"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item">
+                        <img src="assets/img/portfolio/cabin.png" alt="Nota 1" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item">
+                        <img src="assets/img/portfolio/cake.png" alt="Nota 2" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item">
+                        <img src="assets/img/portfolio/circus.png" alt="Nota 3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center text-secondary">Sobre</h2>
+            <p class="text-center">Esta é uma seção sobre o projeto.</p>
+        </div>
+    </section>
+
+    <!-- rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Projeto Site. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>Desenvolvido com Flask</p>
+    </div>
 </body>
+
 </html>
