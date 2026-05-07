@@ -14,7 +14,10 @@
     <!-- div do navegação -->
     <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">Colegio benedicto</a>
+            <a class="navbar-brand" href="#page-top">
+                <img src="{{ url_for('static', filename='img/logo2.jpg') }}" alt="Logo" class="navbar-logo" />
+                Colegio benedicto
+            </a>
             <ul class="navbar-nav">
                 <li><a class="nav-link" href="#portfolio">Notas</a></li>
                 <li><a class="nav-link" href="#about">faltas</a></li>
@@ -50,16 +53,16 @@
             </div>
             <div class="notas-grid">
                 <div class="notas-card">
-                    <img src="" alt="Nota 1" />
+                    <img src="{{ url_for('static', filename='img/nota.png') }}" alt="Notas" />
                     <h1>Notas</h1>
                 </div>
                 <div class="notas-card">
-                    <img src="" alt="Nota 2" />
+                    <img src="{{ url_for('static', filename='img/Faltas.png') }}" alt="Faltas" />
                     <h1>Faltas</h1>
                 </div>
                 <div class="notas-card">
-                    <img src="" alt="Nota 3" />
-                    <h1>classroom</h1>
+                    <img src="{{ url_for('static', filename='img/classroom.png') }}" alt="Classroom" />
+                    <h1>Classroom</h1>
                 </div>
             </div>
         </div>
