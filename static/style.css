@@ -73,6 +73,57 @@ body {
   color: var(--primary);
 }
 
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    position: relative;
+  }
+
+  .navbar-brand {
+    gap: 0.75rem;
+  }
+
+  .navbar-brand .brand-text {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: var(--secondary);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    z-index: 1001;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+}
+
 /* Masthead */
 .masthead {
   padding-top: calc(6rem + 74px);

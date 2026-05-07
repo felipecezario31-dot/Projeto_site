@@ -16,12 +16,13 @@
         <div class="container">
             <a class="navbar-brand" href="#page-top">
                 <img src="{{ url_for('static', filename='img/logo2.jpg') }}" alt="Logo" class="navbar-logo" />
-                Colegio benedicto
+                <span class="brand-text">Colegio benedicto</span>
             </a>
-            <ul class="navbar-nav">
-                <li><a class="nav-link" href="#portfolio">Notas</a></li>
-                <li><a class="nav-link" href="#about">faltas</a></li>
-                <li><a class="nav-link" href="#contact">sobre</a></li>
+            <button class="navbar-toggle" type="button" aria-label="Abrir menu">&#8230;</button>
+            <ul class="navbar-nav" id="navbarMenu">
+                <li><a class="nav-link" href="#portfolio">Dados</a></li>
+                <li><a class="nav-link" href="#about">Sobre</a></li>
+                <li><a class="nav-link" href="#contact">Criadores</a></li>
             </ul>
         </div>
     </nav>
@@ -77,15 +78,26 @@
     </section>
 
     <!-- rodapé -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
-            <h2 id="about h2">Criadores</h2>
+            <h2>Criadores</h2>
         </div>
     </footer>
     <!-- Copyright -->
     <div class="copyright">
         <p>&copy; 2026 Projeto Site. Todos os direitos reservados.</p>
     </div>
+
+    <script>
+        const toggleButton = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+
+        if (toggleButton && navbarMenu) {
+            toggleButton.addEventListener('click', () => {
+                navbarMenu.classList.toggle('show');
+            });
+        }
+    </script>
 </body>
 
 </html>
