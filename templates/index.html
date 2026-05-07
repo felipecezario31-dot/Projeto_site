@@ -17,7 +17,8 @@
             <a class="navbar-brand" href="#page-top">Colegio benedicto</a>
             <ul class="navbar-nav">
                 <li><a class="nav-link" href="#portfolio">Notas</a></li>
-                <li><a class="nav-link" href="#about">Sobre</a></li>
+                <li><a class="nav-link" href="#about">faltas</a></li>
+                <li><a class="nav-link" href="#contact">sobre</a></li>
             </ul>
         </div>
     </nav>
@@ -25,16 +26,15 @@
     <!-- boas vindas/titulo -->
     <header class="masthead">
         <div class="container">
-            <img src="{{ url_for('static', filename='img/logo2.jpg') }}"
-                alt="Logo"
-                class="masthead-avatar"
-            />
-            <h1 class="masthead-heading">Engajar para transformar</h1> 
-            <p class="masthead-subheading">Bem-vindo ao Site de ensino</p>
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
+            <div class="masthead-content">
+                <div class="masthead-branding">
+                    <img src="{{ url_for('static', filename='img/digital.png') }}" alt="Logo Digital" class="masthead-avatar" />
+                    <div class="masthead-title-group">
+                        <h1 class="masthead-heading">Conexão Escola</h1>
+                        <hr>
+                        <p class="masthead-subheading">Engajar para transformar</p>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -42,27 +42,24 @@
     <!-- seção de notas-->
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <h2 class="text-center text-secondary">Notas</h2>
+            <h2 class="text-center text-secondary">Seus dados</h2>
             <div class="divider-custom">
                 <div class="divider-custom-line-nota"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line-nota"></div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item">
-                        <img src="assets/img/portfolio/cabin.png" alt="Nota 1" />
-                    </div>
+            <div class="notas-grid">
+                <div class="notas-card">
+                    <img src="" alt="Nota 1" />
+                    <h1>Notas</h1>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item">
-                        <img src="assets/img/portfolio/cake.png" alt="Nota 2" />
-                    </div>
+                <div class="notas-card">
+                    <img src="" alt="Nota 2" />
+                    <h1>Faltas</h1>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item">
-                        <img src="assets/img/portfolio/circus.png" alt="Nota 3" />
-                    </div>
+                <div class="notas-card">
+                    <img src="" alt="Nota 3" />
+                    <h1>classroom</h1>
                 </div>
             </div>
         </div>
@@ -72,19 +69,19 @@
     <section id="about">
         <div class="container">
             <h2 class="text-center text-secondary">Sobre</h2>
-            <p class="text-center">Esta é uma seção sobre o projeto.</p>
+            <p class="text-center">seção do sobre do site aqui</p>
         </div>
     </section>
 
     <!-- rodapé -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Projeto Site. Todos os direitos reservados.</p>
+            <h2 id="about h2">Criadores</h2>
         </div>
     </footer>
     <!-- Copyright -->
     <div class="copyright">
-        <p>Desenvolvido com Flask</p>
+        <p>&copy; 2026 Projeto Site. Todos os direitos reservados.</p>
     </div>
 </body>
 
