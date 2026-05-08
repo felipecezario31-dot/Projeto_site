@@ -54,15 +54,15 @@
                 <div class="divider-custom-line-nota"></div>
             </div>
             <div class="notas-grid">
-                <div class="notas-card">
+                <div class="notas-card" data-section="notas">
                     <img src="{{ url_for('static', filename='img/nota.png') }}" alt="Notas" />
                     <h1>Notas</h1>
                 </div>
-                <div class="notas-card">
+                <div class="notas-card" data-section="faltas">
                     <img src="{{ url_for('static', filename='img/Faltas.png') }}" alt="Faltas" />
                     <h1>Faltas</h1>
                 </div>
-                <div class="notas-card">
+                <div class="notas-card" data-section="classroom">
                     <img src="{{ url_for('static', filename='img/classroom.png') }}" alt="Classroom" />
                     <h1>Classroom</h1>
                 </div>
@@ -89,16 +89,7 @@
         <p>&copy; 2026 Projeto Site. Todos os direitos reservados.</p>
     </div>
 
-    <script>
-        const toggleButton = document.querySelector('.navbar-toggle');
-        const navbarMenu = document.getElementById('navbarMenu');
-
-        if (toggleButton && navbarMenu) {
-            toggleButton.addEventListener('click', () => {
-                navbarMenu.classList.toggle('show');
-            });
-        }
-    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

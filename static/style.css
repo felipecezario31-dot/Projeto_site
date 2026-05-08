@@ -66,16 +66,20 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: color 0.3s;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  border-radius: 0.5rem;
 }
-.nav-linksair{
+.nav-linksair {
   color: rgb(255, 0, 0);
   margin-left: 20px;
   margin-right: -50px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--primary);
+  color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
 }
 
 .navbar-toggle {
@@ -237,6 +241,14 @@ body {
   width: min(18rem, 100%);
   text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.notas-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .notas-card img {
@@ -253,6 +265,59 @@ body {
   color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.notas-card.expanded {
+  width: 100%;
+  min-height: 16rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  background-color: var(--light);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.expanded-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.expanded-header span {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.minimize-button {
+  border: none;
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: background 0.2s ease;
+}
+
+.minimize-button:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.expanded-body {
+  display: grid;
+  place-items: center;
+}
+
+.notas-card.expanded h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  text-transform: none;
 }
 
 /* Footer */
