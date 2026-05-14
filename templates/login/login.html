@@ -5,129 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Projeto Site</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            min-height: 100vh;
-            font-family: 'Times New Roman', sans-serif;
-            background: linear-gradient(135deg, #4e51ec 0%, #040d30 45%, #00030e 100%);
-            color: #ffffff;
-            display: grid;
-            place-items: center;
-            padding: 20px;
-        }
-
-        .login-page {
-            width: 100%;
-            max-width: 420px;
-        }
-
-        .login-card {
-            background: rgb(233, 226, 226);
-            border-radius: 24px;
-            padding: 32px;
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(12px);
-        }
-
-        .login-brand {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .login-logo {
-            width: 100px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 10px;
-            
-        }
-
-        .login-brand h1 {
-            color: black;
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .login-brand p {
-            color: rgba(0, 0, 0, 0.75);
-        }
-
-        .login-form {
-            display: grid;
-            gap: 18px;
-        }
-
-        .login-form label {
-            font-size: 0.95rem;
-            color: #dce4ff;
-        }
-
-        .login-form input {
-            width: 100%;
-            padding: 14px 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        .login-form input::placeholder {
-            color: rgba(255, 255, 255, 0.55);
-        }
-
-        .login-form button {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 14px;
-            background: #020049;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: filter 0.2s ease;
-        }
-
-        .login-form button:hover {
-            filter: brightness(0.92);
-        }
-
-        .login-error {
-            background: rgba(255, 110, 110, 0.16);
-            border: 1px solid rgba(255, 110, 110, 0.32);
-            color: #ffc7c7;
-            border-radius: 14px;
-            padding: 14px 16px;
-            margin-bottom: 14px;
-            text-align: center;
-        }
-
-        .login-help {
-            margin-top: 20px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.72);
-            font-size: 0.95rem;
-        }
-
-        .login-Bemvindo {
-            color: #000000;
-        }
-
-        .login-help a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #d8e8ff;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
 </head>
 
 <body>
@@ -136,11 +14,15 @@
             <div class="login-brand">
                 <img src="{{ url_for('static', filename='img/logo2.jpg') }}" alt="Logo" class="login-logo">
                 <h1>Login</h1>
-                <p class="login-bemvindo">Bem vindo ao Conecão Escola</p>
+                <p class="login-welcome">Bem vindo ao Conexão Escola</p>
             </div>
 
             <form method="post" class="login-form">
-                <button type="submit">Entrar no Site</button>
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required placeholder="Digite seu usuário">
+                </div>
+                <button type="submit" class="btn-submit">Entrar no Site</button>
             </form>
         </div>
     </div>

@@ -24,7 +24,7 @@
                 <li><a class="nav-link" href="#portfolio">Dados</a></li>
                 <li><a class="nav-link" href="#about">Sobre</a></li>
                 <li><a class="nav-link" href="#contact">Criadores</a></li>
-                <li><a class="nav-linksair" href="{{ url_for('logout') }}">Sair</a></li>
+                <li><a class="nav-link-logout" href="{{ url_for('logout') }}">Sair</a></li>
             </ul>
         </div>
     </nav>
@@ -34,7 +34,8 @@
         <div class="container">
             <div class="masthead-content">
                 <div class="masthead-branding">
-                    <img src="{{ url_for('static', filename='img/digital.png') }}" alt="Logo Digital" class="masthead-avatar" />
+                    <img src="{{ url_for('static', filename='img/digital.png') }}" alt="Logo Digital"
+                        class="masthead-avatar" />
                     <div class="masthead-title-group">
                         <h1 class="masthead-heading">Conexão Escola</h1>
                         <hr>
@@ -50,22 +51,22 @@
         <div class="container">
             <h2 class="text-center text-secondary">Seus dados</h2>
             <div class="divider-custom">
-                <div class="divider-custom-line-nota"></div>
+                <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line-nota"></div>
+                <div class="divider-custom-line"></div>
             </div>
             <div class="notas-grid">
                 <div class="notas-card" data-section="notas">
                     <img src="{{ url_for('static', filename='img/nota.png') }}" alt="Notas" />
-                    <h1>Notas</h1>
+                    <h3>Notas</h3>
                 </div>
                 <div class="notas-card" data-section="faltas">
                     <img src="{{ url_for('static', filename='img/Faltas.png') }}" alt="Faltas" />
-                    <h1>Faltas</h1>
+                    <h3>Faltas</h3>
                 </div>
                 <div class="notas-card" data-section="classroom">
                     <img src="{{ url_for('static', filename='img/classroom.png') }}" alt="Classroom" />
-                    <h1>Classroom</h1>
+                    <h3>Classroom</h3>
                 </div>
             </div>
         </div>
@@ -74,8 +75,13 @@
     <!-- Seção Sobre -->
     <section id="about">
         <div class="container">
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
             <h2 class="text-center text-secondary">Sobre</h2>
-            <p class="text-center">seção do sobre do site aqui</p>
+            <p class="text-center">seção do sobre do site aqui </p>
             <p class="text-center">(EM CONSTRUÇÃO)</p>
         </div>
     </section>
