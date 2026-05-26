@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # ── App & configuração ─────────────────────────────────────────────────────────
 app = Flask(__name__, template_folder='templates', static_folder='static')
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev_key_change_in_production')
+app.config['SECRET_KEY'] = 'dev_key_change_in_production'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///escola.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
