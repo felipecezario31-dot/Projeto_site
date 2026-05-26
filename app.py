@@ -3,7 +3,8 @@ from functools import wraps
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from dotenv import load_dotenv
+load_dotenv()
 # ── App & configuração ─────────────────────────────────────────────────────────
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev_key_change_in_production')
